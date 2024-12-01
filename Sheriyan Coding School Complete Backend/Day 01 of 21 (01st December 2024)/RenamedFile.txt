@@ -1,0 +1,2 @@
+This is the first file in the node js created by me
+This is the updated content of file using appendFile in Node JS
