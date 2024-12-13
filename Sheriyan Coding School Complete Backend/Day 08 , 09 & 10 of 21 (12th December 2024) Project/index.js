@@ -14,6 +14,12 @@ app.get("/" , (req , res) => {
     })
 })
 
+app.get("/files/:fileName" , (req , res) => {
+    fs.readFile(`./files/${req.params.fileName}` , function(err , fileData) {
+        console.log(fileData);
+    })
+})
+
 app.post("/create" , function(req , res) {
     fs.writeFile(`./files/${req.body.TaskName.split(" ").join("")}.txt` , req.body.TaskDetail , function(err) {
         res.redirect("/")

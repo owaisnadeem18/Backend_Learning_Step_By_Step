@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
     <h2>
@@ -25,12 +26,19 @@
                             <h2>
                                 <%= file %>    
                             </h2>
+
+                            <div class="py-1 px-3 mt-4 mb-2 rounded-xl text-1xl bg-blue-600 w-fit">
+                                <a href= "/files/<%= file %>">
+                                    Read more ...
+                                </a>
+                            </div>                            
+
                         </div>
                                 
                         <% }) %>
                     
                     <% } else { %>
-                        <h3 class="bg-zinc-800 ">
+                        <h3 class="bg-zinc-800 p-3 rounded-md">
                            No tasks yet
                        </h3>
                     <% } %>
