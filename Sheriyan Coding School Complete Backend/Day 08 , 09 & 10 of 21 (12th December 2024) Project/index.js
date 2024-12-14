@@ -15,8 +15,9 @@ app.get("/" , (req , res) => {
 })
 
 app.get("/files/:fileName" , (req , res) => {
-    fs.readFile(`./files/${req.params.fileName}` , function(err , fileData) {
-        console.log(fileData);
+    fs.readFile(`./files/${req.params.fileName}` , "utf-8" , function(err , fileData) {
+        res.render("show" , {fileKaNaam: req.params.fileName , fileData });
+        console.log(fileData)
     })
 })
 
