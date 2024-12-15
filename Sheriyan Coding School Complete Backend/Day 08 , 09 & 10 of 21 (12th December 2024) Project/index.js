@@ -21,6 +21,11 @@ app.get("/files/:fileName" , (req , res) => {
     })
 })
 
+app.get("/edit/:editFile" , (req , res) => {
+    res.render("edit")
+})
+
+
 app.post("/create" , function(req , res) {
     fs.writeFile(`./files/${req.body.TaskName.split(" ").join("")}.txt` , req.body.TaskDetail , function(err) {
         res.redirect("/")

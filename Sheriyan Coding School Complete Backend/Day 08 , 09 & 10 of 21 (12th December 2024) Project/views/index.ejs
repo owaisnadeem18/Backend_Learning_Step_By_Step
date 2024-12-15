@@ -26,10 +26,15 @@
                                 <%= file %>    
                             </h2>
 
-                            <div class="py-1 px-3 mt-4 mb-2 rounded-xl text-1xl bg-blue-600 w-fit">
-                                <a href= "/files/<%= file %>">
-                                    Read more ...
-                                </a>
+                            <div class="py-1 mt-4 mb-2 rounded-xl text-1xl ">
+                                <div class="flex w-full justify-between" >
+                                    <a class="bg-zinc-600 px-2 py-1 rounded-md" href= "/files/<%= file %>">
+                                        Read more ...
+                                    </a>
+                                    <a  class="bg-zinc-600 px-2 py-1 rounded-md" href= "/edit/<%= file %>">
+                                        Edit 
+                                    </a>
+                                </div>
                             </div>                            
 
                         </div>
