@@ -1,3 +1,4 @@
 .show-container {
     background-color: rgb(41, 41, 41);
+    border: 5px solid green;
 }

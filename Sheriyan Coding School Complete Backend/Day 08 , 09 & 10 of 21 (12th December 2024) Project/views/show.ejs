@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show File Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
+    <link rel="stylesheet" href="./show.css">
 
 </head>
 <body>
     
-    <div class="main show-container min-h-screen w-full bg-zinc-900 p-5">
-        <a href="/">
+    <div class="main show-container min-h-screen w-full bg-zinc-300 p-5">
+        <a href="/" class="px-3 mb-2 text-white py-4 rounded-md bg-blue-600" >
             Go Back to Home Page 
         </a>
-        <h2>
-            <%= fileKaNaam %>
-        </h2>        
-        <p>
-            <%= fileData %>
-        </p>
+        <div class="bg-zinc-300" >
+            <h2  >
+                <%= fileKaNaam %>
+            </h2>        
+            <p>
+                <%= fileData %>
+            </p>
+        </div>
     </div>
 
 </body>

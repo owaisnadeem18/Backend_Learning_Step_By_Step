@@ -22,9 +22,14 @@ app.get("/files/:fileName" , (req , res) => {
 })
 
 app.get("/edit/:editFile" , (req , res) => {
-    res.render("edit")
+    res.render("edit" , {PrevfileName: req.params.editFile} )
 })
 
+// Now we need to create a new route of post (for edit file)
+
+app.post("/edit" , function(req , res) {
+    console.log(req.body)
+})
 
 app.post("/create" , function(req , res) {
     fs.writeFile(`./files/${req.body.TaskName.split(" ").join("")}.txt` , req.body.TaskDetail , function(err) {
